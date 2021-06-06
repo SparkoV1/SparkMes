@@ -1,18 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import {BrowserRouter} from "react-router-dom";
-import {addPost} from './redux/state';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+import { addPost, updateNewPostText } from "./redux/state";
 
 export let rerenderEntireTree = (state) => {
-    ReactDOM.render(<React.Fragment>
-            <BrowserRouter>
-                <App state={state} addPost={addPost}/>
-            </BrowserRouter>
-        </React.Fragment>
-        , document.getElementById('root'));
+  ReactDOM.render(
+    <React.Fragment>
+      <BrowserRouter>
+        <App
+          state={state}
+          addPost={addPost}
+          updateNewPostText={updateNewPostText}
+        />
+      </BrowserRouter>
+    </React.Fragment>,
+    document.getElementById("root")
+  );
 };
-
-
