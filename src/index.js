@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
-import state from './components/State'
-import {addPost} from './components/State'
+import state from './components/State/state'
+import {addPost} from './components/State/state'
 
 
 ReactDOM.render(
