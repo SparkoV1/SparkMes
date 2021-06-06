@@ -16,6 +16,9 @@
 }
 
 .messages {
+    display: flex;
+    flex-direction: column;
+    max-width: max-content;
     padding: 10px;
 }
 

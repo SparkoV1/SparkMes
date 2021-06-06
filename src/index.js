@@ -3,36 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-let dialogsData = [
-    {id: 1, name: 'Dimych',},
-    {id: 2, name: 'Andrey',},
-    {id: 3, name: 'Sveta',},
-    {id: 4, name: 'Sasha',},
-    {id: 5, name: 'Viktor',},
-    {id: 6, name: 'Valera',}
-]
-
-let messagesData = [
-    {id: 1, message: 'Hi',},
-    {id: 2, message: 'How is your it-kamasutra?',},
-    {id: 3, message: 'Yo',},
-    {id: 4, message: 'Yo',},
-    {id: 5, message: 'Yo',},
-]
-
-let postsData = [
-    {id: 1, message: 'Hi, how are you?', likesCount:15},
-    {id: 2, message: 'It\'s my first post', likesCount:23},
-]
-
+import {BrowserRouter} from "react-router-dom";
+import state from './components/State'
+import {addPost} from './components/State'
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App dialogsData={dialogsData} messagesData={messagesData} postsData={postsData}/>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <BrowserRouter>
+            <App state={state} addPost={addPost}/>
+        </BrowserRouter>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
