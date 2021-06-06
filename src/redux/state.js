@@ -5,7 +5,8 @@ let state = {
             {id: 2, message: 'It\'s my first post', likesCount: 23},
         ],
     },
-    dialogsPage:{ dialogsData:[
+    dialogPage: {
+        dialogsData:[
             {id: 1, name: 'Dimych',},
             {id: 2, name: 'Andrey',},
             {id: 3, name: 'Sveta',},
@@ -21,7 +22,7 @@ let state = {
             {id: 5, message: 'Yo',},
         ],}
 
-    },
+    };
 
 // export let addPost = (postMessage) => {
 //     let newPost = {
