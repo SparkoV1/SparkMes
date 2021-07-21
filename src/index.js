@@ -6,14 +6,13 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 
-const rerenderEntireTree = (state) => {
+let rerenderEntireTree = (state) => {
     ReactDOM.render(
         <React.Fragment>
             <BrowserRouter>
                 <App
                     state={state}
-                    addPost={store.addPost.bind(store)}
-                    updateNewPostText={store.updateNewPostText.bind(store)}
+                    dispatch={store.dispatch.bind(store)}
                 />
             </BrowserRouter>
         </React.Fragment>,
