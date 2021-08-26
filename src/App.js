@@ -9,7 +9,7 @@ import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DailogsContainer";
 
-const App = (props) => {
+const App = () => {
   return (
     <div className="app-wrapper">
       <Header />
@@ -17,13 +17,12 @@ const App = (props) => {
       <div className="app-wrapper-content">
         <Route
           path="/dialogs"
-          render={() => <DialogsContainer  store={props.store} />}
+          render={() => <DialogsContainer/>}
         />
         <Route
           path="/profile"
           render={() => (
-            <Profile
-             store={props.store}/>
+            <Profile/>
           )}
         />
         <Route path="/news" render={() => <News />} />
