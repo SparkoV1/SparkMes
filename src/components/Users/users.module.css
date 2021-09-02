@@ -2,3 +2,13 @@
     width: 100px;
     height: 100px;
 }
+
+.pageNumber span{
+    cursor: pointer;
+    padding: 5px;
+}
+
+.selectedPage {
+    font-weight: bold;
+    cursor: pointer;
+}
