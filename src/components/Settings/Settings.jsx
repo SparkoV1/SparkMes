@@ -1,7 +1,7 @@
 import React from "react";
-import s from './Settings.module.css'
+import "./Settings.scss";
 
-const Settings = (props) => {
+const Settings = () => {
     return (
         <div>
             Settings

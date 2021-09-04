@@ -1,5 +1,5 @@
 import React from "react";
-import s from './Dialogs.module.css'
+import "./Dialogs.scss"
 import DialogItem from "./DialogItem/DailogItem";
 import MessageItem from "./Message/MessageItem";
 
@@ -26,16 +26,16 @@ const Dialogs = (props) => {
 
 
     return (
-        <div className={s.dialogs}>
-            <div className={s.dialogsItems}>
+        <div className="dialogs">
+            <div className="dialogsItems">
                 {dialogsElements}
             </div>
-            <div className={s.messages}>
+            <div className="messages">
                 <div>{messagesElements}</div>
                 <textarea
                     value={newMessageBody}
                     onChange={onNewMessageChange}
-                    placeholder="Enter your message">sdfsdf</textarea>
+                    placeholder="Enter your message">enter</textarea>
                 <button onClick={onSendMessageClick}>Send</button>
             </div>
         </div>
